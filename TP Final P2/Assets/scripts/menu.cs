@@ -5,23 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class menu : MonoBehaviour
 {
-    
-    void Start()
+    public void Play()
     {
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Options()
     {
-        
+        SceneManager.LoadScene(2);
     }
-    public void play()
-    {
-        SceneManager.LoadScene(1);
-    }
-    public void quit()
+
+    public void Exit()
     {
         Application.Quit();
     }
 }
+
