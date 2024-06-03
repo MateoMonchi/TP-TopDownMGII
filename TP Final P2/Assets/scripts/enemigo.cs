@@ -9,11 +9,11 @@ public class enemigo : MonoBehaviour
     GameObject player;
     public Animator animator;
     public float live;
-    public GameObject corazon;
+    
     Puntuacion puntuacion;
     public Color basico;
     public SpriteRenderer sr;
-
+    public List<GameObject> lootItems;
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("bala"))
@@ -48,8 +48,16 @@ public class enemigo : MonoBehaviour
     public void death()
     {
         Destroy(gameObject);
-        Instantiate(corazon, transform.position, corazon.transform.rotation);
+        DropLoot();
         puntuacion.Suma();
+    }
+    void DropLoot()
+    {
+        if (lootItems.Count >= 0)
+        {
+            int index = Random.Range(0, lootItems.Count);
+            Instantiate(lootItems[index], transform.position, Quaternion.identity);
+        }
     }
     IEnumerator damage()
     {

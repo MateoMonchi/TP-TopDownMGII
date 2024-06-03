@@ -49,11 +49,6 @@ public class Vida : MonoBehaviour
         derrota.gameObject.SetActive(false);
     }
 
-  
-    void Update()
-    {
-        
-    }
     IEnumerator damage()
     {
         sr.color = Color.red;

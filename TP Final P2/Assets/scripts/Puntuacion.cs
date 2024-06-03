@@ -17,7 +17,7 @@ public class Puntuacion : MonoBehaviour
         textoPuntuacion.text = puntuacion.ToString("D3");
         if(puntuacion >= PuntosVictoria)
         {
-victory.gameObject.SetActive(true);
+            victory.gameObject.SetActive(true);
             Time.timeScale = 0f;
 
         }
@@ -28,14 +28,8 @@ victory.gameObject.SetActive(true);
         victory.gameObject.SetActive(false);
         Time.timeScale = 1f;
     }
-
-    
-    void Update()
-    {
-        
-    }
     public void cambioDeEscena(int destino)
     {
-SceneManager.LoadScene(destino);
+        SceneManager.LoadScene(destino);
     }
 }

@@ -178,9 +178,10 @@ MonoBehaviour:
   agent: {fileID: 4290962937337165919}
   animator: {fileID: 6580863532820013157}
   live: 5
-  corazon: {fileID: 5319695168622883207, guid: 7d13a4295a2866543815336a81018d50, type: 3}
   basico: {r: 0, g: 1, b: 0, a: 1}
   sr: {fileID: 7381279625284963228}
+  lootItems:
+  - {fileID: 5319695168622883207, guid: 7d13a4295a2866543815336a81018d50, type: 3}
 --- !u!58 &4797088978699873487
 CircleCollider2D:
   m_ObjectHideFlags: 0

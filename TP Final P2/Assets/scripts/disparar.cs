@@ -7,14 +7,6 @@ public class disparar : MonoBehaviour
     public GameObject bullet;
     public Transform shootPoint;
     public float bulletSpeed;
-
-   
-    void Start()
-    {
-        
-    }
-
-   
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
